@@ -1,0 +1,17 @@
+<h1>Arm พัทธนันท์ ประยูร 5/8-9</h1>
+<text>text</text>
+<p>
+ <text><b>bold text</b></text>
+<p>
+  <text><strong>import text</strong></text>
+<p>
+  <text><em>Emphasized text</em></text>
+<p>
+  <h2>HTML <mark>Marked</mark> Formartting</h2>
+<p>
+  <h2>HTML <small>Small</small> Formartting</h2>
+<p>
+   <text>My favorite colour is <s>blue</s><u> red!</u></text>
+<p>
+   <text>This is<sub> subscript</sub> and<sup> supscript</sup></text>
+<p>
