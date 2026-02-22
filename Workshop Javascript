@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSFiddle no1834se</title>
+
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #574fd6;
+}
+
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+  </style>
+
+  
+</head>
+<body>
+  <div class="container">
+  <h1>Smart Grade Calculator</h1>
+  
+  <label>ชื่อผู้เรียน</label>
+  <input type="text" id="studentName" placeholder="กรอกชื่อ">
+
+  <label>คะแนน (0 - 100)</label>
+  <input type="number" id="score" placeholder="กรอกคะแนน">
+
+  <button onclick="calculateGrade()">คำนวณเกรด</button>
+
+  <div id="result"></div>
+</div>
+
+  <script>
+    function calculateGrade() {
+  let name = document.getElementById("studentName").value;
+  let score = parseInt(document.getElementById("score").value);
+  let grade = "";
+  
+  if (isNaN(score) || score < 0 || score > 100) {
+    document.getElementById("result").innerHTML = "กรุณากรอกคะแนนให้ถูกต้อง (0-100)";
+    return;
+  }
+
+  if (score >= 80) {
+    grade = "A";
+  } else if (score >= 70) {
+    grade = "B";
+  } else if (score >= 60) {
+    grade = "C";
+  } else if (score >= 50) {
+    grade = "D";
+  } else {
+    grade = "F";
+  }
+
+  document.getElementById("result").innerHTML =
+    "ชื่อ: " + name + "<br>คะแนน: " + score + "<br>เกรดที่ได้: " + grade;
+}
+  </script>
+</body>
+</html>
